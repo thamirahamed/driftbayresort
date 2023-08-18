@@ -3,6 +3,7 @@
     --clr-yellow100: #fef9c3;
     --clr-yellow200: #fef08a;
     --clr-yellow500: #eab308;
+    --clr-blue1000: #172236;
     --clr-blue950: #1e2d48;
     --clr-blue900: #25395b;
     --clr-blue600: #3b5b91;
@@ -43,6 +44,10 @@ html {
     scroll-behavior: smooth;
     background-color: var(--clr-light);
     color: var(--clr-blue950);
+}
+
+html::-webkit-scrollbar{
+    display: none;
 }
 
 body {
@@ -160,7 +165,7 @@ a {
     justify-content: space-between;
     text-align: center; 
     text-transform: uppercase;
-    background-image: url(../images/hotelbanner.png);
+    background-image: url(../images/hotelbanner.webp);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -222,6 +227,8 @@ a {
     height: var(--size-2xl);
     display: block;
     animation: fade-down 0.5s 0.3s backwards;
+    position: relative;
+    z-index: 9999;
 }
 
 .name{
@@ -240,6 +247,67 @@ a {
     font-weight: 700;
     animation: fade-in 1s 0.3s backwards, glow 8s 1.3s infinite;
 }
+
+/* Mobile Navigation */
+
+.mobile-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 87vh;
+    background-color: var(--clr-blue1000);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-nav2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60vh;
+    background-color: var(--clr-blue1000);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-nav__menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    animation: fade-down 0.3s backwards;
+}
+
+.mobile-nav__link{
+    font-size: var(--size-s);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-light);
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+}
+
+.mobile-nav__link:hover{
+    letter-spacing: 0.1em;
+    color: var(--clr-yellow500);
+}
+
+.mobile-nav__btn{
+    font-size: var(--size-s);
+}
+
+/* End of Mobile Navigation */
 
 .about{
     display: flex;
@@ -406,6 +474,11 @@ a {
     color: var(--clr-blue950);
 }
 
+.spaces__lst{
+    display: block;
+    padding: 0 1rem;
+}
+
 .spaces__list{
     font-size: var(--size-s);
     margin-bottom: 1.5rem;
@@ -525,6 +598,14 @@ a {
     .name__anim{
         font-size: var(--size-5xl);
     }
+
+    .spaces__lst{
+        padding: 0 7rem;
+    }
+
+    .restaurants__lst{
+        padding: 0 4rem;
+    }
 }
 
 /* S */
@@ -535,6 +616,14 @@ a {
 
     .footer__col{
         flex-basis: 50%;
+    }
+
+    .spaces__lst{
+        padding: 0 9rem;
+    }
+
+    .restaurants__lst{
+        padding: 0 7rem;
     }
 }
 
@@ -683,9 +772,13 @@ a {
         font-size: var(--size-base);
     }
 
+    .restaurants__lst{
+        padding: 0;
+    }
+
     .restaurants__list{
         font-size: var(--size-base);
-        text-align: center;
+        text-align: left;
     }
 
     .spaces{
@@ -716,9 +809,14 @@ a {
         font-size: var(--size-base);
     }
 
+    .spaces__lst{
+        padding-right: 0;
+        padding-left: 5rem;
+    }
+
     .spaces__list{
         font-size: var(--size-base);
-        text-align: center;
+        text-align: right;
     }
 }
 
@@ -742,6 +840,10 @@ a {
 
     .name__anim{
         font-size: var(--size-7xl);
+    }
+
+    .spaces__lst{
+        padding-left: 5rem;
     }
 }
 
@@ -816,6 +918,10 @@ a {
         font-size: var(--size-l);
     }
 
+    .spaces__lst{
+        padding-left: 9rem;
+    }
+
     .spaces__list{
         font-size: var(--size-l);
     }
@@ -833,5 +939,9 @@ a {
 
     .name__anim{
         font-size: var(--size-9xl);
+    }
+
+    .spaces__lst{
+        padding-left: 12rem;
     }
 }

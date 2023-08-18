@@ -39,6 +39,20 @@
       </nav>     
     </header>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav2">
+      <nav> 
+        <ul class="mobile-nav__menu">
+          <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+          <li><a href="branches.html" class="mobile-nav__link">Branches</a></li>
+          <li><a href="adventures.html" class="mobile-nav__link">Adventures</a></li>
+          <li><a href="restaurants.html" class="mobile-nav__link">Restaurants</a></li>
+          <li><a href="booking.html" class="mobile-nav__btn btn">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+
     <footer class="footer">
 
       <div class="footer__row">
@@ -95,6 +109,25 @@
       </div>
     
     </footer>
+
+    <script>
+
+      const headerBtn = document.querySelector('.header__bars');
+      const mobileNav = document.querySelector('.mobile-nav2');
+      
+      // State
+      let isMobileNavOpen = false;
+  
+      headerBtn.addEventListener('click', () => {
+        isMobileNavOpen = !isMobileNavOpen;
+        if (isMobileNavOpen) {
+          mobileNav.style.display = 'flex';
+        } else{
+          mobileNav.style.display = 'none';
+        }
+      });
+  
+    </script>
 
   </body>
     

@@ -5,13 +5,12 @@
     <title>Driftbay Resort</title>
     
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/svg+xml" href="images/hotellogo1.png">
+    <link rel="icon" href="images/hotellogo1.webp">
     <link href="https://api.fontshare.com/v2/css?f[]=synonym@600,500,300,700,400&display=swap" rel="stylesheet">  
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a website about Driftbay Resort">
-    
 
   </head>
 
@@ -20,7 +19,7 @@
     <header class="header">            
       <nav class="header__nav">
         
-        <a href="index.html"><img class="logo" src="images/hotellogo1.png" alt="logo"></a>
+        <a href="index.html"><img class="logo" src="images/hotellogo1.webp" alt="logo"></a>
           
           <ul class="header__navlinks">
               <li><a class="header__link" href="index.html">Home</a></li>
@@ -43,6 +42,20 @@
       </div>
     </header>
     
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav> 
+        <ul class="mobile-nav__menu">
+          <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+          <li><a href="branches.html" class="mobile-nav__link">Branches</a></li>
+          <li><a href="adventures.html" class="mobile-nav__link">Adventures</a></li>
+          <li><a href="restaurants.html" class="mobile-nav__link">Restaurants</a></li>
+          <li><a href="booking.html" class="mobile-nav__btn btn">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+
     <main>
       <section class="about container section">
         
@@ -55,7 +68,7 @@
         </div>
 
         <div class="about__img">
-          <img src="images/aboutus.jpg" alt="Hotel pool">
+          <img loading="lazy" loading="lazy" src="images/aboutus.webp" alt="Hotel pool">
         </div>
 
       </section>
@@ -69,7 +82,7 @@
         </div>
 
         <div class="rooms__img">
-          <img src="images/rooms.jpg" alt="Rooms">
+          <img loading="lazy" src="images/rooms.webp" alt="Rooms">
         </div>
 
       </section>
@@ -79,16 +92,18 @@
         <div class="restaurants__info">
           <h1>Dining</h1>
           <p class="restaurants__text">Experience a culinary voyage from Asia to Italy at our resort. Discover the freshest seafood in diverse cuisines and savor authentic Sri Lankan flavors that celebrate vibrant colors and spices at our Driftbay restaurants:</p>
-          <ul class="restaurants__list">
-            <li>Olu - Sri Lankan Cuisine</li>
-            <li>Acquolina - Italian fine dining</li>
-            <li>Dining by Design - Beach-side dining</li>
-          </ul>
+          <div class="restaurants__lst">
+            <ul class="restaurants__list">
+              <li>Olu - Sri Lankan Cuisine</li>
+              <li>Acquolina - Italian fine dining</li>
+              <li>Dining by Design - Beach-side dining</li>
+            </ul>
+          </div>
           <p class="restaurants__text1">The hotel enforces a rigorous policy concerning cleanliness, food hygiene, and freshness, all while creating an ideal dining atmosphere.</p>
         </div>
         
         <div class="restaurants__img">
-          <img src="images/restaurants.webp" alt="Restaurant">
+          <img loading="lazy" src="images/restaurants.webp" alt="Restaurant">
         </div>
 
       </section>
@@ -98,18 +113,20 @@
         <div class="spaces__info">
           <h1>Our Spaces</h1>
           <p class="spaces__text">Discover a world of luxury at Driftbay Resort, where our well-appointed suites and villas provide stunning views and unparalleled comfort.  We've got:</p>
-          <ol class="spaces__list">
-            <li>Spa</li>
-            <li>Fitness Centre</li>
-            <li>Swimming Pools</li>
-            <li>Beach Cabanas</li>
-            <li>Library</li>
-          </ol>
+          <div class="spaces__lst">
+            <ol class="spaces__list">
+              <li>Spa</li>
+              <li>Fitness Centre</li>
+              <li>Swimming Pools</li>
+              <li>Beach Cabanas</li>
+              <li>Library</li>
+            </ol>
+          </div>
           <p class="spaces__text1">Rejuvenate your senses at our spa for holistic wellness, and stay active at the modern fitness center. As the day winds down, unwind in style at our beach cabanas accompanied by live music as the sun sets. Driftbay Resort promises unforgettable moments amidst these exceptional facilities</p>
         </div>
         
         <div class="spaces__img">
-          <img src="images/spaces.webp" alt="Restaurant">
+          <img loading="lazy" src="images/spaces.webp" alt="Restaurant">
         </div>
 
       </section>
@@ -124,7 +141,7 @@
         
         <div class="footer__col">
           <div class="footer__lnk">
-            <a href="index.html"><img class="footer__logo" src="images/hotellogo1.png" alt="logo"></a>
+            <a href="index.html"><img loading="lazy" class="footer__logo" src="images/hotellogo1.webp" alt="logo"></a>
           </div>
         </div>
 
@@ -156,13 +173,13 @@
           <h3>Socials</h3>
           <div class="footer__socials">
             <div class="footer__lnk">
-              <a href="https://instagram.com"><img class="footer__social" src="images/instagram.png" alt="Instagram"></a>
+              <a href="https://instagram.com"><img loading="lazy" class="footer__social" src="images/instagram.webp" alt="Instagram"></a>
             </div>
             <div class="footer__lnk">
-              <a href="https://facebook.com"><img class="footer__social" src="images/facebook.png" alt="Facebook"></a>
+              <a href="https://facebook.com"><img loading="lazy" class="footer__social" src="images/facebook.webp" alt="Facebook"></a>
             </div>
             <div class="footer__lnk">
-              <a href="https://twitter.com"><img class="footer__social" src="images/twitter.png" alt="Twitter"></a>
+              <a href="https://twitter.com"><img loading="lazy" class="footer__social" src="images/twitter.webp" alt="Twitter"></a>
             </div>
           </div>
         </div>
@@ -176,6 +193,25 @@
       </div>
 
     </footer>
+
+    <script>
+
+      const headerBtn = document.querySelector('.header__bars');
+      const mobileNav = document.querySelector('.mobile-nav');
+      
+      // State
+      let isMobileNavOpen = false;
+  
+      headerBtn.addEventListener('click', () => {
+        isMobileNavOpen = !isMobileNavOpen;
+        if (isMobileNavOpen) {
+          mobileNav.style.display = 'flex';
+        } else{
+          mobileNav.style.display = 'none';
+        }
+      });
+  
+    </script>
 
   </body>
 
