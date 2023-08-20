@@ -219,7 +219,6 @@ a {
     width: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
-    z-index: 99;
 }
 
 .header2__nav{
@@ -235,11 +234,16 @@ a {
     padding-right: 3rem;
 }
 
+.header__logo{
+    z-index: 1;
+}
+
 .logo{
     height: 70px;
     width: 70px;
     transition: all 1s;
     animation: fade-down 0.5s 0.3s backwards;
+    z-index: 99999;
 }
 
 .logo:hover{
@@ -249,6 +253,7 @@ a {
 
 .header__navlinks{
     display: none;
+    z-index: 1;
 }
 
 .header__bars{
@@ -267,10 +272,12 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99;
     width: 100%;
     height: 87vh;
-    background-color: var(--clr-blue1000);
+    background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
+    background-size: 150% 150%;
+    background-position: center;
     display: none;
     justify-content: center;
     align-items: center;
@@ -281,10 +288,12 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99;
     width: 100%;
     height: 60vh;
-    background-color: var(--clr-blue1000);
+    background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
+    background-size: 150% 175%;
+    background-position: center;
     display: none;
     justify-content: center;
     align-items: center;
@@ -433,6 +442,7 @@ a {
 
 .hero-text{
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -753,12 +763,6 @@ a {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.booking__inputBox input:optional ~ i
-.booking__inputBox input:focus ~ i{
-    height: 44px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
 .booking__inputBox u{
     text-decoration: none;
     font-size: var(--size-xs);
@@ -769,7 +773,8 @@ a {
 }
 
 .booking__error{
-    display: none;
+    display: inline;
+    transform: translateY(55px);
     position: absolute;
     font-size: var(--size-s);
     width: 100%;
@@ -862,7 +867,7 @@ a {
 }
 
 .booking__checkBox input:checked ~ span{
-    background: var(--clr-yellow500);
+    background: var(--clr-blue900);
     color: var(--clr-light);
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
