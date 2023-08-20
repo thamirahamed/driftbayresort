@@ -198,8 +198,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 87vh;
-    max-height: 87vh;
+    height: 810px;
 }
 
 .header2{
@@ -215,7 +214,7 @@ a {
     background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0));
     justify-content: space-between;
     align-items: center;
-    height: 19vh;
+    height: 160px;
     width: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -228,14 +227,10 @@ a {
     background-size: 300% 300%;
     animation: color 16s ease-in-out infinite;
     align-items: center;
-    height: 15vh;
+    height: 150px;
     width: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
-}
-
-.header__logo{
-    z-index: 1;
 }
 
 .logo{
@@ -243,7 +238,6 @@ a {
     width: 70px;
     transition: all 1s;
     animation: fade-down 0.5s 0.3s backwards;
-    z-index: 99999;
 }
 
 .logo:hover{
@@ -253,7 +247,6 @@ a {
 
 .header__navlinks{
     display: none;
-    z-index: 1;
 }
 
 .header__bars{
@@ -274,7 +267,7 @@ a {
     left: 0;
     z-index: 99;
     width: 100%;
-    height: 87vh;
+    height: 810px;
     background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
     background-size: 150% 150%;
     background-position: center;
@@ -290,7 +283,7 @@ a {
     left: 0;
     z-index: 99;
     width: 100%;
-    height: 60vh;
+    height: 600px;
     background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
     background-size: 150% 175%;
     background-position: center;
@@ -447,12 +440,13 @@ a {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 100%;
-    max-height: 87vh;
+    height: 810px;
+    max-height: 810px;
+    pointer-events: none;
 }
 
 .hero-text__anim{
-    font-size: var(--size-4xl);
+    font-size: var(--size-5xl);
     color: var(--clr-light);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -637,13 +631,217 @@ a {
 
 /* End of Homepage */
 
+/* Restaurants Page */
+
+.restaurants__hero{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/restaurantsbanner.webp);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.restaurants__hero-text__anim{
+    font-size: var(--size-4xl);
+    color: var(--clr-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: fade-in 1s 0.3s backwards, glow 8s 1.3s infinite;
+    overflow: hidden;
+}
+
+.restaurantspage{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+}
+
+.restaurants__card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 270px;
+    height: 350px;
+    background: var(--clr-light);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: 0.5s;
+    animation: fade-down 1s 0.3s backwards;
+}
+
+.restaurants__card:hover{
+    height: 520px;
+}
+
+.restaurants__imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: var(--clr-blue1000);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.restaurants__card:hover .restaurants__imgBx{
+    top: -80px;
+    scale: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.restaurants__imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurants__content{
+    position: absolute;
+    top: 258px;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+    padding: 0 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.restaurants__card:hover .restaurants__content{
+    height: 400px;
+    top: 150px;
+}
+
+.restaurants__content h2{
+    font-size: var(--size-3xl);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 0.05rem;
+}
+
+.restaurants__content h3{
+    font-size: var(--size-l);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+}
+
+.restaurants__content p{
+    font-size: var(--size-base);
+    margin-bottom: 2rem;
+}
+
+.event-title{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-size: 150% 100%;
+    background-position: center;
+}
+
+.event-title h1{
+    color: var(--clr-light);
+    font-size: var(--size-5xl);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: glow 8s 1.3s infinite;
+}
+
+.event__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    gap: 50px;
+}
+
+.event__btn{
+    display: flex;
+    width: 260px;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.event__btn:nth-child(1){
+    background-image: url(/../images/weddingbtn.webp);
+}
+
+.event__btn:nth-child(2){
+    background-image: url(/../images/meetingbtn.webp);
+    
+}
+
+.event__btn img{
+    transition: 0.4s;
+    filter: grayscale(1) brightness(0.5);
+}
+
+.event__btn span{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 130px;
+    color: var(--clr-yellow500);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--size-4xl);
+    filter: grayscale(0);
+    transition: 0.4s;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.event__btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transform: translateY(-3px);
+}
+
+.event__btn:hover img{
+    filter: grayscale(0) brightness(0.6);
+}
+
+.event__btn:hover span{
+    letter-spacing: 0.05em;
+    color: var(--clr-light);
+    text-shadow: rgba(254, 240, 138, 0.75) 1px 0 15px, rgba(254, 240, 138, 0.5) 1px 0 25px;
+}
+
+/* End of Restaurants Page */
+
 /* Booking Page */
 
 .booking__hero{
     display: flex;
     width: 100%;
-    height: 50vh;
-    background-image: url(../images/booking.webp);
+    height: 450px;
+    background-image: url(../images/bookingbanner.webp);
     background-size: cover;
     background-position: center;
     justify-content: space-evenly;
@@ -887,6 +1085,8 @@ a {
 
 /* End of Booking Page */
 
+/* Desktop Viewports */
+
 /* XS */
 @media (min-width: 530px) {
     .container{
@@ -894,7 +1094,7 @@ a {
     }
     
     .hero-text__anim{
-        font-size: var(--size-5xl);
+        font-size: var(--size-6xl);
     }
 
     .spaces__lst{
@@ -903,6 +1103,36 @@ a {
 
     .restaurants__lst{
         padding: 0 4rem;
+    }
+
+    .restaurants__hero-text__anim{
+        font-size: var(--size-6xl);
+    }
+
+    .restaurants__card{
+        width: 350px;
+    }
+
+    .restaurants__card:hover{
+        height: 475px;
+    }
+
+    .restaurants__imgBx{
+        width: 380px;
+    }
+
+    .restaurants__content h2{
+        font-size: var(--size-4xl);
+    }
+
+    .restaurants__card:hover .restaurants__content{
+        height: 320px;
+    }
+
+    .event__btn, .event__links span{
+        width: 350px;
+        height: 180px;
+        font-size: var(--size-5xl);
     }
 
     .booking__hero-text__anim{
@@ -916,16 +1146,64 @@ a {
         max-width: 640px;
     }
 
+    .hero-text__anim{
+        font-size: var(--size-7xl);
+    }
+
     .footer__col{
         flex-basis: 50%;
+    }
+
+    .restaurants__lst{
+        padding: 0 7rem;
     }
 
     .spaces__lst{
         padding: 0 9rem;
     }
 
-    .restaurants__lst{
-        padding: 0 7rem;
+    .restaurants__hero-text__anim{
+        font-size: var(--size-7xl);
+    }
+
+    .restaurants__card{
+        width: 390px;
+        height: 390px;
+    }
+
+    .restaurants__card:hover{
+        height: 515px;
+    }
+
+    .restaurants__imgBx{
+        width: 430px;
+        height: 250px;
+    }
+
+    .restaurants__content{
+        top: 283px;
+        height: 85px;
+    }
+
+    .restaurants__content h2{
+        font-size: var(--size-5xl);
+    }
+
+    .restaurants__content h3{
+        font-size: var(--size-xl);
+    }
+
+    .restaurants__content p{
+        font-size: var(--size-l);
+    }
+
+    .restaurants__card:hover .restaurants__content{
+        height: 350px;
+        top: 160px;
+    }
+
+    .event-title h1{
+        font-size: var(--size-6xl);
     }
 
     .booking__hero-text__anim{
@@ -984,10 +1262,6 @@ a {
     
     .header__bars{
         display: none;
-    }
-
-    .hero-text__anim{
-        font-size: var(--size-6xl);
     }
 
     .about{
@@ -1125,6 +1399,24 @@ a {
         text-align: right;
     }
 
+    .restaurants__hero-text__anim{
+        font-size: var(--size-8xl);
+    }
+
+    .event-title{
+        height: 180px;
+    }
+
+    .event-title h1{
+        font-size: var(--size-7xl);
+    }
+
+    .event__btn, .event__links span{
+        width: 400px;
+        height: 200px;
+        font-size: var(--size-5xl);
+    }
+
     .booking__hero-text__anim{
         font-size: var(--size-8xl);
     }
@@ -1157,7 +1449,7 @@ a {
     }
 
     .hero-text__anim{
-        font-size: var(--size-7xl);
+        font-size: var(--size-8xl);
     }
 
     .spaces__lst{
@@ -1173,10 +1465,6 @@ a {
 @media (min-width: 1280px) {
     .container{
         max-width: 1280px;
-    }
-
-    .hero-text__anim{
-        font-size: var(--size-8xl);
     }
 
     .about{
@@ -1252,6 +1540,20 @@ a {
         flex-basis: 25%;
     }
 
+    .restaurants__hero-text__anim{
+        font-size: var(--size-9xl);
+    }
+
+    .event__links{
+        gap: 0;
+    }
+
+    .event__btn, .event__links span{
+        width: 450px;
+        height: 225px;
+        font-size: var(--size-5xl);
+    }
+
     .booking__hero-text__anim{
         font-size: var(--size-9xl);
     }
@@ -1295,5 +1597,11 @@ a {
     .booking__btn{
         margin: 0 16rem;
         margin-top: 45px;
+    }
+    
+    .event__btn, .event__links span{
+        width: 500px;
+        height: 250px;
+        font-size: var(--size-6xl);
     }
 }
