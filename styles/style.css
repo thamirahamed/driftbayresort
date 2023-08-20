@@ -643,6 +643,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .restaurants__hero-text__anim{
@@ -717,6 +718,7 @@ a {
     padding: 0 30px;
     text-align: center;
     transition: 0.5s;
+    user-select: none;
 }
 
 .restaurants__card:hover .restaurants__content{
@@ -846,6 +848,7 @@ a {
     background-position: center;
     justify-content: space-evenly;
     align-items: center;
+    pointer-events: none;
 }
 
 .booking__hero-text__anim{
