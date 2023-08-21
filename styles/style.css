@@ -82,6 +82,22 @@ svg {
     margin-top: 5rem;
 } 
 
+button{
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    color: var(--clr-light);
+    text-decoration: none;
+}
+
+/* Animation */
+
 @keyframes fade-down{
     0%{
         opacity: 0;
@@ -116,7 +132,7 @@ svg {
     }
 }
 
-@keyframes color{
+@keyframes gradient{
     0%, 100%{
         background-position: 0 50%;
     }
@@ -126,20 +142,7 @@ svg {
     }
 }
 
-
-button{
-    display: inline-block;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: inherit;
-}
-
-a {
-    color: var(--clr-light);
-    text-decoration: none;
-}
+/* End of Animation */
 
 .btn {
     font-weight: 600;
@@ -198,7 +201,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 810px;
+    height: 90vh;
 }
 
 .header2{
@@ -216,8 +219,7 @@ a {
     align-items: center;
     height: 160px;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 2rem;
 }
 
 .header2__nav{
@@ -225,12 +227,11 @@ a {
     justify-content: space-between;
     background: linear-gradient(167deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
     background-size: 300% 300%;
-    animation: color 16s ease-in-out infinite;
+    animation: gradient 16s ease-in-out infinite;
     align-items: center;
     height: 150px;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 2rem;
 }
 
 .logo{
@@ -247,16 +248,61 @@ a {
 
 .header__navlinks{
     display: none;
+    align-items: baseline;
+    list-style: none;
+    padding: 0;
+    gap: 3em;
+    animation: fade-down 0.5s 0.3s backwards;
+}
+
+.header__link{
+    position: relative;
+    font-size: var(--size-xs);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--clr-light);
+    letter-spacing: 0.05em;
+}
+
+.header__link::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--clr-yellow500);
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header__link:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+.header__booknow{
+    display: flex;
+    font-size: var(--size-xs);
+    color: var(--clr-yellow500);
+    background-color: rgba(254, 249, 195, 0.2);
 }
 
 .header__bars{
     color: var(--clr-light);
-    width: var(--size-2xl);
-    height: var(--size-2xl);
+    width: var(--size-4xl);
+    height: var(--size-4xl);
     display: block;
     animation: fade-down 0.5s 0.3s backwards;
     position: relative;
     z-index: 9999;
+}
+
+.header__bars img{
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
 }
 
 /* Mobile Navigation */
@@ -415,7 +461,7 @@ a {
 
 .footer__social:hover{
     background: var(--clr-yellow500);
-    box-shadow: var(--clr-yellow100) 1px 0 15px;
+    box-shadow: var(--clr-yellow100) 1px 0 12px;
 }
 
 .footer__credits{
@@ -440,8 +486,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 810px;
-    max-height: 810px;
+    height: 90vh;
     pointer-events: none;
 }
 
@@ -636,7 +681,7 @@ a {
 .restaurants__hero{
     display: flex;
     width: 100%;
-    height: 450px;
+    height: 50vh;
     background-image: url(../images/restaurantsbanner.webp);
     background-size: cover;
     background-position: center;
@@ -842,7 +887,7 @@ a {
 .booking__hero{
     display: flex;
     width: 100%;
-    height: 450px;
+    height: 50vh;
     background-image: url(../images/bookingbanner.webp);
     background-size: cover;
     background-position: center;
@@ -1092,10 +1137,17 @@ a {
 
 /* XS */
 @media (min-width: 530px) {
+
+    /* General */
+
     .container{
         max-width: 530px;
     }
     
+    /* End of General */
+
+    /* Homepage */
+
     .hero-text__anim{
         font-size: var(--size-6xl);
     }
@@ -1107,6 +1159,10 @@ a {
     .restaurants__lst{
         padding: 0 4rem;
     }
+
+    /* End of Homepage */
+
+    /* Restaurants Page */
 
     .restaurants__hero-text__anim{
         font-size: var(--size-6xl);
@@ -1138,23 +1194,37 @@ a {
         font-size: var(--size-5xl);
     }
 
+    /* End of Restaurants Page */
+
+    /* Booking Page */
+
     .booking__hero-text__anim{
         font-size: var(--size-6xl);
     }
+
+    /* End of Booking Page */
+
 }
 
 /* S */
 @media (min-width: 640px) {
+    
+    /* General */
+    
     .container{
         max-width: 640px;
     }
 
-    .hero-text__anim{
-        font-size: var(--size-7xl);
-    }
-
     .footer__col{
         flex-basis: 50%;
+    }
+
+    /* End of General */
+
+    /* Homepage */
+
+    .hero-text__anim{
+        font-size: var(--size-7xl);
     }
 
     .restaurants__lst{
@@ -1164,6 +1234,10 @@ a {
     .spaces__lst{
         padding: 0 9rem;
     }
+
+    /* End of Homepage */
+
+    /* Restaurants Page */
 
     .restaurants__hero-text__anim{
         font-size: var(--size-7xl);
@@ -1209,63 +1283,42 @@ a {
         font-size: var(--size-6xl);
     }
 
+    /* End of Restaurants Page */
+
+    /* Booking Page */
+
     .booking__hero-text__anim{
         font-size: var(--size-7xl);
     }
+
+    /* End of Booking Page */
+
 }
 
 /* M */
 @media (min-width: 856px) {
+    
+    /* General */
+
     .container{
         max-width: 856px;
     }
 
+    .header__nav, .header2__nav{
+        padding: 0 3rem;
+    }
+
     .header__navlinks{
         display: flex;
-        align-items: baseline;
-        list-style: none;
-        padding: 0;
-        gap: 3em;
-        animation: fade-down 0.5s 0.3s backwards;
-    }
-    
-    .header__link{
-        position: relative;
-        font-size: var(--size-xs);
-        text-decoration: none;
-        font-weight: 600;
-        color: var(--clr-light);
-        letter-spacing: 0.05em;
-    }
-    
-    .header__link::before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        right: 0;
-        width: 0;
-        height: 3px;
-        background-color: var(--clr-yellow500);
-        transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    
-    .header__link:hover::before {
-        left: 0;
-        right: auto;
-        width: 100%;
-    }
-    
-    
-    .header__booknow{
-        display: flex;
-        font-size: var(--size-xs);
-        color: var(--clr-yellow500);
-        background-color: rgba(254, 249, 195, 0.2);
     }
     
     .header__bars{
         display: none;
     }
+
+    /* End of General */
+
+    /* Homepage */
 
     .about{
         display: grid;
@@ -1402,6 +1455,10 @@ a {
         text-align: right;
     }
 
+    /* End of Homepage */
+
+    /* Restaurants Page */
+
     .restaurants__hero-text__anim{
         font-size: var(--size-8xl);
     }
@@ -1420,6 +1477,10 @@ a {
         font-size: var(--size-5xl);
     }
 
+    /* End of Restaurants Page */
+
+    /* Booking Page */
+
     .booking__hero-text__anim{
         font-size: var(--size-8xl);
     }
@@ -1431,10 +1492,16 @@ a {
     .booking__adventure{
         margin: 30px 28px;
     }
+
+    /* End of Booking Page */
+
 }
 
 /* L */
 @media (min-width: 1024px) {
+    
+    /* General */
+    
     .container{
         max-width: 1024px;
     }
@@ -1451,6 +1518,10 @@ a {
         font-size: var(--size-s);
     }
 
+    /* End of General */
+
+    /* Homepage */
+
     .hero-text__anim{
         font-size: var(--size-8xl);
     }
@@ -1459,16 +1530,34 @@ a {
         padding-left: 5rem;
     }
 
+    /* End of Homepage */
+
+    /* Booking Page */
+
     .booking__adventure{
         margin: 30px 33px;
     }
+
+    /* End of Booking Page */
+
 }
 
 /* XL */
 @media (min-width: 1280px) {
+    
+    /* General */
+    
     .container{
         max-width: 1280px;
     }
+
+    .footer__col{
+        flex-basis: 25%;
+    }
+
+    /* End of General */
+
+    /* Homepage */
 
     .about{
         padding-left: 5rem;
@@ -1539,9 +1628,9 @@ a {
         font-size: var(--size-l);
     }
 
-    .footer__col{
-        flex-basis: 25%;
-    }
+    /* End of Homepage */
+
+    /* Restaurants Page */
 
     .restaurants__hero-text__anim{
         font-size: var(--size-9xl);
@@ -1556,6 +1645,10 @@ a {
         height: 225px;
         font-size: var(--size-5xl);
     }
+
+    /* End of Restaurants Page */
+
+    /* Booking Page */
 
     .booking__hero-text__anim{
         font-size: var(--size-9xl);
@@ -1573,13 +1666,23 @@ a {
         margin: 0 8rem;
         margin-top: 45px;
     }
+
+    /* End of Booking Page */
+
 }
 
 /* XXL */
 @media (min-width: 1536px) {
+    
+    /* General */
+
     .container{
         max-width: 1536px;
     }
+
+    /* End of General */
+
+    /* Homepage */
 
     .hero-text__anim{
         font-size: var(--size-9xl);
@@ -1588,6 +1691,20 @@ a {
     .spaces__lst{
         padding-left: 12rem;
     }
+
+    /* End of Homepage */
+
+    /* Restaurants Page */
+
+    .event__btn, .event__links span{
+        width: 500px;
+        height: 250px;
+        font-size: var(--size-6xl);
+    }
+
+    /* End of Restaurants Page */
+
+    /* Booking Page */
 
     .booking fieldset{       
         margin: 0 16rem;
@@ -1601,10 +1718,7 @@ a {
         margin: 0 16rem;
         margin-top: 45px;
     }
-    
-    .event__btn, .event__links span{
-        width: 500px;
-        height: 250px;
-        font-size: var(--size-6xl);
-    }
+
+    /* End of Booking Page */
+
 }

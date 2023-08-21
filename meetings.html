@@ -5,7 +5,7 @@
 
     <title>Driftbay Resort</title>
     
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/meetings.css">
     <link rel="icon" type="image/svg+xml" href="images/hotellogo1.webp">
     <link href="https://api.fontshare.com/v2/css?f[]=synonym@600,500,300,700,400&display=swap" rel="stylesheet">  
 
@@ -17,28 +17,34 @@
 
   <body>
 
-    <header class="header2">            
-      <nav class="header2__nav">
+    <header class="header">            
+      <nav class="header__nav">
   
         <a href="index.html"><img class="logo" src="images/hotellogo1.webp" alt="logo"></a>
                 
           <ul class="header__navlinks">
-            <li><a class="header__link" href="index.html">Home</a></li>
-            <li><a class="header__link" href="branches.html">Branches</a></li>
-            <li><a class="header__link" href="adventures.html">Adventures</a></li>
-            <li><a class="header__link" href="restaurants.html">Restaurants</a></li>
-            <li><a class="header__booknow btn" href="booking.html">Book Now</a></li>
+            <div class="header__mainlinks">
+                <li><a class="header__link" href="index.html">Home</a></li>
+                <li><a class="header__link" href="branches.html">Branches</a></li>
+                <li><a class="header__link" href="adventures.html">Adventures</a></li>
+                <li><a class="header__link" href="restaurants.html">Restaurants</a></li>
+                <li><a class="header__booknow btn" href="booking.html">Book Now</a></li>
+            </div>
+            <div class="header__eventlinks">
+                <li><a class="header__link" href="weddings.html">weddings</a></li>
+                <li><a class="header__link" href="meetings.html">meetings</a></li>
+            </div>
           </ul>
       
           <button class="header__bars">
             <img src="images/bars.svg" alt="Menu Bar Button">           
           </button>
       
-      </nav>
+      </nav>     
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav2">
+    <div class="mobile-nav">
       <nav> 
         <ul class="mobile-nav__menu">
           <li><a href="index.html" class="mobile-nav__link">Home</a></li>
@@ -46,80 +52,15 @@
           <li><a href="adventures.html" class="mobile-nav__link">Adventures</a></li>
           <li><a href="restaurants.html" class="mobile-nav__link">Restaurants</a></li>
           <li><a href="booking.html" class="mobile-nav__btn btn">Book Now</a></li>
+          <i></i>
+          <div class="mobile-nav__eventmenu">
+            <li><a class="mobile-nav__link mobile-nav__eventlinks" href="weddings.html">weddings</a></li>
+            <li><a class="mobile-nav__link mobile-nav__eventlinks" href="meetings.html">meetings</a></li>
+          </div>
         </ul>
       </nav>
     </div>
     <!-- End of Mobile Navigation -->
-
-    <div class="restaurants__hero">
-      <h1 class="restaurants__hero-text__anim">Restaurants</h1>
-    </div>
-
-    <main>
-
-      <article class="restaurantspage container section"> 
-
-        <section class="restaurants__card">
-          <div class="restaurants__imgBx">
-            <img loading="lazy" src="images/srilankancuisine.webp" alt="Spice Isle - Sri Lankan Cuisine Restaurant">
-          </div>
-          <div class="restaurants__content">
-            <h2>Spice Isle</h2>
-            <h3>Sri Lankan Cuisine</h3>
-            <p>Savor Sri Lanka at Spice Isle. Discover the rich tapestry of Sri Lankan cuisine, blending aromatic spices and fresh ingredients into unforgettable dishes.  Taste the essence of our island's heritage with every bite. </p>
-            <a class="restaurants__menu btn" href="#">View Menu</a>
-          </div>
-        </section>
-
-        <section class="restaurants__card">
-          <div class="restaurants__imgBx">
-            <img loading="lazy" src="images/italiancuisine.webp" alt="Piazza - Italian Cuisine Restaurant">
-          </div>
-          <div class="restaurants__content">
-            <h2>Piazza</h2>
-            <h3>Italian Cuisine</h3>
-            <p>Discover Italy at Piazza. Experience authentic Italian cuisine, from perfect pastas to wood-fired pizzas, all capturing the essence of Italy's flavors. Join us at Piazza and celebrate food, family, and life.</p>
-            <a class="restaurants__menu btn" href="#">View Menu</a>
-          </div>
-        </section>
-
-        <section class="restaurants__card">
-          <div class="restaurants__imgBx">
-            <img loading="lazy" src="images/japanesecuisine.webp" alt="Hanamichi - Japanese Cuisine Restaurant">
-          </div>
-          <div class="restaurants__content">
-            <h2>Hanamichi</h2>
-            <h3>Japanese Cuisine</h3>
-            <p>Experience Japan at Hanamichi. From delicate sushi to sizzling teppanyaki, savor authentic flavors that embody the art of Japanese cuisine. Join us in celebrating a symphony of taste and tradition.</p>
-            <a class="restaurants__menu btn" href="#">View Menu</a>
-          </div>
-        </section>
-
-      </article>
-
-      <section class="event section">
-
-        <div class="event-title">
-          <h1>Events</h1>
-        </div>
-
-        <div class="event__links container">
-          <div class="event__btn">
-            <a href="weddings.html"><img loading="lazy" src="images/weddingbtn.webp" alt="Wedding Page Button"></a>
-            <span>Weddings</span>
-          </div>
-
-          <div class="event__btn">
-            <a href="meetings.html"><img loading="lazy" src="images/meetingbtn.webp" alt="Meetings Page Button"></a>
-            <span>Meetings</span>
-          </div>
-        </div>
-      
-      </section>
-
-      <div class="section"></div> <!--Space between content and footer-->
-
-    </main>
 
     <footer class="footer">
 
@@ -127,7 +68,7 @@
             
         <div class="footer__col">
           <div class="footer__lnk">
-            <a href="index.html"><img class="footer__logo" src="images/hotellogo1.webp" alt="logo" loading="lazy"></a>
+            <a href="index.html"><img loading="lazy" class="footer__logo" src="images/hotellogo1.webp" alt="logo"></a>
           </div>
         </div>
     
@@ -181,7 +122,7 @@
     <script>
 
       const headerBtn = document.querySelector('.header__bars');
-      const mobileNav = document.querySelector('.mobile-nav2');
+      const mobileNav = document.querySelector('.mobile-nav');
       
       // State
       let isMobileNavOpen = false;
