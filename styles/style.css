@@ -2,7 +2,8 @@
     --clr-light: #ffffff;
     --clr-yellow100: #fef9c3;
     --clr-yellow200: #fef08a;
-    --clr-yellow500: #eab308;
+    --clr-yellow300: #fad66b;
+    --clr-yellow500: #f6bb09;
     --clr-blue1000: #172236;
     --clr-blue950: #1e2d48;
     --clr-blue900: #25395b;
@@ -122,16 +123,6 @@ a {
     }
 }
 
-@keyframes glow{
-    0%, 100%{
-        text-shadow: var(--clr-yellow200) 0 0 0;
-    }
-
-    50%{
-        text-shadow: var(--clr-yellow200) 1px 0 10px;
-    }
-}
-
 @keyframes gradient{
     0%, 100%{
         background-position: 0 50%;
@@ -145,50 +136,43 @@ a {
 /* End of Animation */
 
 .btn {
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    background-color: rgb(254, 240, 138, 0.4);
-    border: 2px solid var(--clr-yellow500);
-    color: var(--clr-yellow500);
-    text-shadow: var(--clr-yellow500) 1px 0 15px;
-    padding: 0.5em 1em;
+    font-size: var(--size-l);
+    letter-spacing: 0.02em;
+    background: var(--clr-yellow500);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: var(--clr-light);
+    padding: .5em 1em;
     border-radius: 6px;
     transition: all 0.25s;
-
 }
 
 .btn:hover{
-    color: var(--clr-yellow100);
-    background-color: var(--clr-yellow500);
-    box-shadow: 0 0 10px var(--clr-yellow500),0 0 40px var(--clr-yellow500),0 0 40px var(--clr-yellow500);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    letter-spacing: 0.05em;
     transform: scale(1.05);
-    font-weight: 700;
 }
 
 .btn2 {
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    background-color: rgba(219, 227, 240, 0.4);
-    border: 2px solid var(--clr-blue900);
-    color: var(--clr-blue900);
-    text-shadow: var(--clr-blue900) 1px 0 20px;
-    padding: 0.5em 1em;
-    border-radius: 6px;
+    font-size: var(--size-l);
+    letter-spacing: 0.02em;
+    background-color: var(--clr-yellow300);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: var(--clr-light);
+    padding: .5em 1em;
+    border-radius: 5px;
     transition: all 0.25s;
 }
 
 .btn2:hover{
-    color: var(--clr-blue100);
-    background-color: var(--clr-blue900);
-    box-shadow: 0 0 10px var(--clr-blue900),0 0 40px var(--clr-blue900),0 0 40px var(--clr-blue900);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    letter-spacing: 0.05em;
     transform: scale(1.05);
-    font-weight: 700;
 }
 
 .header{
@@ -217,7 +201,7 @@ a {
     background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0));
     justify-content: space-between;
     align-items: center;
-    height: 160px;
+    height: 120px;
     width: 100%;
     padding: 0 2rem;
 }
@@ -229,7 +213,7 @@ a {
     background-size: 300% 300%;
     animation: gradient 16s ease-in-out infinite;
     align-items: center;
-    height: 150px;
+    height: 110px;
     width: 100%;
     padding: 0 2rem;
 }
@@ -285,8 +269,7 @@ a {
 .header__booknow{
     display: flex;
     font-size: var(--size-xs);
-    color: var(--clr-yellow500);
-    background-color: rgba(254, 249, 195, 0.2);
+    padding: 0.6em 1.25em;
 }
 
 .header__bars{
@@ -366,6 +349,7 @@ a {
 
 .mobile-nav__btn{
     font-size: var(--size-s);
+    padding: 0.7em 1.3em;
 }
 
 /* End of Mobile Navigation */
@@ -493,10 +477,10 @@ a {
 .hero-text__anim{
     font-size: var(--size-5xl);
     color: var(--clr-light);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
     font-weight: 700;
-    animation: fade-in 1s 0.3s backwards, glow 8s 1.3s infinite;
+    animation: fade-in 1s 0.3s backwards;
 }
 
 .about{
@@ -694,10 +678,10 @@ a {
 .restaurants__hero-text__anim{
     font-size: var(--size-4xl);
     color: var(--clr-light);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
     font-weight: 700;
-    animation: fade-in 1s 0.3s backwards, glow 8s 1.3s infinite;
+    animation: fade-in 1s 0.3s backwards;
     overflow: hidden;
 }
 
@@ -810,7 +794,6 @@ a {
     font-size: var(--size-5xl);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    animation: glow 8s 1.3s infinite;
 }
 
 .event__links{
@@ -877,7 +860,6 @@ a {
 .event__btn:hover span{
     letter-spacing: 0.05em;
     color: var(--clr-light);
-    text-shadow: rgba(254, 240, 138, 0.75) 1px 0 15px, rgba(254, 240, 138, 0.5) 1px 0 25px;
 }
 
 /* End of Restaurants Page */
@@ -899,10 +881,10 @@ a {
 .booking__hero-text__anim{
     font-size: var(--size-5xl);
     color: var(--clr-light);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
     font-weight: 700;
-    animation: fade-in 1s 0.3s backwards, glow 8s 1.3s infinite;
+    animation: fade-in 1s 0.3s backwards;
 }
 
 .booking form{
@@ -1121,13 +1103,12 @@ a {
 
 .booking__btn{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 4rem;
     margin-top: 45px;
 }
 
 .booking__btn .btn, .btn2{
-    font-size: var(--size-l);
     width: 50%;
 }
 
@@ -1200,6 +1181,10 @@ a {
 
     .booking__hero-text__anim{
         font-size: var(--size-6xl);
+    }
+
+    .booking__btn .btn, .btn2{
+        width: 225px;
     }
 
     /* End of Booking Page */
@@ -1306,6 +1291,7 @@ a {
 
     .header__nav, .header2__nav{
         padding: 0 3rem;
+        height: 125px;
     }
 
     .header__navlinks{
@@ -1510,11 +1496,7 @@ a {
         margin-top: 9rem;
     }     
 
-    .header__link{
-        font-size: var(--size-s);
-    }
-
-    .header__booknow{
+    .header__link, .header__booknow{
         font-size: var(--size-s);
     }
 
@@ -1536,6 +1518,10 @@ a {
 
     .booking__adventure{
         margin: 30px 33px;
+    }
+
+    .booking__btn button{
+        font-size: var(--size-xl);
     }
 
     /* End of Booking Page */
