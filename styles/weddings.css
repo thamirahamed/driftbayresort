@@ -146,7 +146,6 @@ a {
     padding: .75em 1.5em;
     border-radius: 25px;
     transition: all 0.25s;
-
 }
 
 .btn:hover{
@@ -506,6 +505,136 @@ a {
     font-size: var(--size-s);
 }
 
+.settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.settings h1{
+    text-transform: uppercase;
+    font-size: var(--size-6xl);
+    margin-bottom: 0.5rem;
+}
+
+.settings i{
+    width: 150px;
+    height: 5px;
+    background: var(--clr-pink500);
+    border-radius: 3px;
+    margin-bottom: 3rem;
+}
+
+.settings__content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+.settings__cards{
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-light);
+    border-radius: 5px;
+    gap: 0.5rem;
+    width: 290px;
+    height: 500px;
+}
+
+.settings__img{
+    width: 100%;
+    height: 200px;
+    background: #271736;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.settings__img img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.settings__info{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(-45deg, var(--clr-purple600), var(--clr-pink500));
+    border-radius: 15px;
+    text-align: center;
+    color: var(--clr-light);
+    padding: 15px 25px;
+    position: relative;
+}
+
+.settings__info h2{
+    font-size: var(--size-4xl);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.settings__info p{
+    font-size: var(--size-s);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.settings__reservebtn{  
+    position: relative;
+}
+
+.review{
+    display: flex;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+}
+
+.review__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.review__rippedpaper{
+    position: absolute;
+    height: 50vh;
+}
+
+.review__rippedpaper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.review__info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: var(--clr-light);
+    font-size: var(--size-s);
+    gap: 1.5rem;
+    font-style: italic;
+}
+
+.review__info img{
+    width: 60px;
+    height: 40px;
+    filter: invert(1);
+}
+
 /* Desktop Viewports */
 
 @media (min-width: 530px){
@@ -535,6 +664,27 @@ a {
         font-size: var(--size-4xl);
     }
 
+    .settings__cards{
+        width: 325px;
+        height: 475px;
+    }
+
+    .settings__info{
+        height: 275px;
+    }
+
+    .settings__info p{
+        margin-bottom: 2.75rem;
+    }
+
+    .settings__reservebtn{  
+        position: relative;
+        top: -22.5px;
+    }
+
+    .review__info{
+        padding: 100px;
+    }
 }
 
 @media (min-width: 640px){
@@ -555,6 +705,10 @@ a {
         font-size: var(--size-7xl);
     }
 
+    .review__info{
+        font-size: var(--size-base);
+        padding: 150px;
+    }
 }
 
 @media (min-width: 856px){
@@ -602,6 +756,44 @@ a {
         font-size: var(--size-base);
     }
 
+    .settings h1{
+        font-size: var(--size-7xl);
+    }
+
+    .settings__cards{
+        width: 350px;
+    }
+
+    .settings__info P{
+        font-size: var(--size-base);
+        margin-bottom: 2rem;
+    }
+
+    .settings__cards{
+        height: 490px;
+    }
+
+    .settings__info{
+        height: 290px;
+    }
+    
+    .settings__reservebtn{  
+        position: relative;
+        top: -10px;
+    }
+
+    .review{
+        height: auto;
+        width: auto;
+    }
+    
+    .review__rippedpaper{
+        height: 100%;
+    }
+
+    .review__info{
+        padding: 200px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -658,6 +850,10 @@ a {
         text-align: left;
     }
 
+    .review__info{
+        padding: 250px;
+    }
+
 }
 
 @media (min-width: 1280px){
@@ -689,6 +885,11 @@ a {
         height: 500px;
         text-align: left;
         transform: translateX(-30px);
+    }
+
+    .review__info{
+        padding: 300px;
+        font-size: var(--size-l);
     }
 
 }
@@ -726,6 +927,11 @@ a {
 
     .weddings-desc__info p{
         font-size: var(--size-l);
+    }
+
+    .review__info{
+        padding: 350px;
+        font-size: var(--size-xl);
     }
 
 }
