@@ -472,6 +472,7 @@ a {
     width: 100%;
     height: 90vh;
     pointer-events: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .hero-text__anim{
@@ -678,6 +679,7 @@ a {
     align-items: center;
     overflow: hidden;
     pointer-events: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .restaurants__hero-text__anim{
@@ -881,6 +883,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     pointer-events: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .booking__hero-text__anim{
