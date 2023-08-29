@@ -681,7 +681,6 @@ a {
     }
 
     .settings__reservebtn{  
-        position: relative;
         top: -22.5px;
     }
 
@@ -781,7 +780,6 @@ a {
     }
     
     .settings__reservebtn{  
-        position: relative;
         top: -10px;
     }
 
@@ -930,6 +928,11 @@ a {
 
     .weddings-desc__info p{
         font-size: var(--size-l);
+    }
+
+    .review{
+        align-items: center;
+        justify-content: center;
     }
 
     .review__info{
