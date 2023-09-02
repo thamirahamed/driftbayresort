@@ -8,6 +8,7 @@
     --clr-blue950: #1e2d48;
     --clr-blue900: #25395b;
     --clr-blue600: #3b5b91;
+    --clr-blue200: #b7c7e1;
     --clr-blue100: #dbe3f0;
 
     /* yellow500 rgb(234, 179, 8) */
@@ -667,6 +668,200 @@ a {
 
 /* End of Homepage */
 
+/* Branches Page */
+
+.branches__hero{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-image: url(../images/branchesbanner.webp);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.branches__hero-text__anim{
+    font-size: var(--size-4xl);
+    color: var(--clr-light);
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: fade-in 1s 0.3s backwards;
+    overflow: hidden;
+}
+
+.branches{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.branches__content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.branches__img{
+    width: auto;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.branches__mainImg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.branches__maps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    bottom: -205px;
+    border: none;
+    transition: all 1s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.branches__mapsLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.maps-arrow{
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+    filter: invert(1);
+    margin-top: 3rem;
+}
+
+.branches__mapsLabel span{
+    color: var(--clr-light);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.branches__map{
+    width: 95%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+    border: none;
+}
+
+.branches__img:hover .branches__maps{
+    bottom: 0;
+    opacity: 1;
+}
+
+.branches__img:hover .branches__map{
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.branches__img:hover .branches__mapsLabel{
+    opacity: 0;
+}
+
+.branches__img:hover .branches__mainImg{
+    filter: blur(10px) brightness(0.65);
+}
+
+.branches__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.branches__info h1{
+    font-size: var(--size-5xl);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+}
+
+.branches__info h2{
+    font-size: var(--size-4xl);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.branches__info i{
+    width: 125px;
+    height: 8px;
+    background-color: var(--clr-yellow500);
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.branches__info p{
+    font-size: var(--size-s);
+}
+
+.summary{
+    display: flex;
+    justify-content: center;
+}
+
+.summary__table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--size-base);
+}
+
+.summary__table thead{
+    background: var(--clr-blue950);
+    color: white;
+    text-transform: uppercase;
+}
+
+.summary__table td, .summary__table th{
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.summary__table tr{
+    margin-bottom: 15px;
+}
+
+.summary__table td{
+    font-weight: 500;
+}
+
+.summary__table tbody tr:nth-child(odd){
+    background-color: var(--clr-blue100);
+}
+
+.summary__table tbody tr:nth-child(even){
+    background-color: var(--clr-blue200);
+}
+
+/* End of Branches Page */
+
 /* Restaurants Page */
 
 .restaurants__hero{
@@ -700,6 +895,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     gap: 100px 50px;
+    position: relative;
 }
 
 .restaurants__card{
@@ -717,7 +913,19 @@ a {
 }
 
 .restaurants__card:hover{
-    height: 520px;
+    height: 475px;
+}
+
+.arrow{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    filter: opacity(0.75);
+    bottom: 1px;
+}
+
+.restaurants__card:hover .arrow{
+    display: none;
 }
 
 .restaurants__imgBx{
@@ -748,7 +956,7 @@ a {
 
 .restaurants__content{
     position: absolute;
-    top: 258px;
+    top: 250px;
     width: 100%;
     height: 75px;
     overflow: hidden;
@@ -776,8 +984,12 @@ a {
 }
 
 .restaurants__content p{
-    font-size: var(--size-base);
+    font-size: var(--size-s);
     margin-bottom: 2rem;
+}
+
+.restaurants__content a{
+    font-size: var(--size-s);
 }
 
 .restaurants__card:hover .restaurants__content{
@@ -787,27 +999,31 @@ a {
 
 .event-title{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 150px;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(30,45,72,1) 20%, rgba(40,61,98,1) 35%, rgba(44,68,109,1) 45%, rgba(45,68,109,1) 50%, rgba(44,68,109,1) 55%, rgba(40,61,98,1) 65%, rgba(30,45,72,1) 80%, rgba(20,30,48,1) 100%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    background-size: 150% 100%;
-    background-position: center;
+    gap: .5rem;
 }
 
 .event-title h1{
-    color: var(--clr-light);
-    font-size: var(--size-5xl);
-    letter-spacing: 0.1em;
+    color: var(--clr-blue950);
+    font-size: var(--size-7xl);
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
+}
+
+.event-title i{
+    width: 200px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--clr-yellow500);
 }
 
 .event__links{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding-top: 5rem;
     gap: 50px;
@@ -1160,6 +1376,14 @@ a {
 
     /* End of Homepage */
 
+    /* Branches Page */
+
+    .branches__hero-text__anim{
+        font-size: var(--size-6xl);
+    }
+
+    /* End of Branches Page */
+
     /* Restaurants Page */
 
     .restaurants__hero-text__anim{
@@ -1171,7 +1395,7 @@ a {
     }
 
     .restaurants__card:hover{
-        height: 475px;
+        height: 435px;
     }
 
     .restaurants__imgBx{
@@ -1239,6 +1463,26 @@ a {
 
     /* End of Homepage */
 
+    /* Branches Page */
+
+    .branches__hero-text__anim{
+        font-size: var(--size-7xl);
+    }
+
+    .branches__info h1{
+        font-size: var(--size-6xl);
+    }
+
+    .branches__info h2{
+        font-size: var(--size-5xl);
+    }
+
+    .branches__info p{
+        font-size: var(--size-base);
+    }
+
+    /* End of Branches Page */
+
     /* Restaurants Page */
 
     .restaurants__hero-text__anim{
@@ -1251,7 +1495,7 @@ a {
     }
 
     .restaurants__card:hover{
-        height: 515px;
+        height: 470px;
     }
 
     .restaurants__imgBx{
@@ -1260,7 +1504,7 @@ a {
     }
 
     .restaurants__content{
-        top: 283px;
+        top: 275px;
         height: 85px;
     }
 
@@ -1273,16 +1517,16 @@ a {
     }
 
     .restaurants__content p{
-        font-size: var(--size-l);
+        font-size: var(--size-base);
+    }
+
+    .restaurants__content a{
+        font-size: var(--size-base);
     }
 
     .restaurants__card:hover .restaurants__content{
         height: 350px;
         top: 160px;
-    }
-
-    .event-title h1{
-        font-size: var(--size-6xl);
     }
 
     /* End of Restaurants Page */
@@ -1295,6 +1539,37 @@ a {
 
     /* End of Booking Page */
 
+}
+
+/* Table Viewport */
+
+@media (max-width: 856px) {
+    .summary__table thead{
+        display: none;
+    }
+    
+    .summary__table, .summary__table tbody, .summary__table tr, .summary__table td{
+        display: block;
+        width: 100%;
+        font-size: var(--size-s);
+    }
+    .summary__table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .summary__table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: 1px solid var(--clr-blue950);
+    }
 }
 
 /* M */
@@ -1470,18 +1745,43 @@ a {
 
     /* End of Homepage */
 
+    /* Branches Page */
+
+    .branches__hero-text__anim{
+        font-size: var(--size-8xl);
+    }
+
+    .branches__img{
+        width: auto;
+        height: 475px;
+    }
+
+    .branches__maps{
+        bottom: -318px;
+    }
+
+    /* End of Branches Page */
+
     /* Restaurants Page */
 
     .restaurants__hero-text__anim{
         font-size: var(--size-8xl);
     }
 
-    .event-title{
-        height: 180px;
+    .restaurants__card:hover{
+        height: 510px;
+    }
+
+    .restaurants__content p{
+        font-size: var(--size-l);
+    }
+
+    .restaurants__content a{
+        font-size: var(--size-l);
     }
 
     .event-title h1{
-        font-size: var(--size-7xl);
+        font-size: var(--size-8xl);
     }
 
     .event__btn, .event__links span{
@@ -1520,7 +1820,7 @@ a {
     }
 
     .section{
-        margin-top: 9rem;
+        margin-top: 8rem;
     }
     
     .logo{
@@ -1545,6 +1845,14 @@ a {
     }
 
     /* End of Homepage */
+
+    /* Branches Page */
+
+    .branches__info{
+        width: 845px;
+    }
+
+    /* End of Branches Page */
 
     /* Booking Page */
 
@@ -1648,6 +1956,27 @@ a {
 
     /* End of Homepage */
 
+    /* Branches Page */
+
+    .branches__hero-text__anim{
+        font-size: var(--size-9xl);
+    }
+
+    .branches__img{
+        width: 48%;
+    }
+
+    .branches__info{
+        width: 48%;
+        align-items: start;
+    }
+
+    .branches__info i{
+        margin-bottom: 2rem;
+    }
+
+    /* End of Branches Page */
+
     /* Restaurants Page */
 
     .restaurants__hero-text__anim{
@@ -1711,6 +2040,27 @@ a {
     }
 
     /* End of Homepage */
+
+    /* Branches Page */
+
+    .branches__info h1{
+        font-size: var(--size-7xl);
+    }
+
+    .branches__info h2{
+        font-size: var(--size-6xl);
+    }
+
+    .branches__info p{
+        font-size: var(--size-l);
+    }
+
+    .summary__table{
+        font-size: var(--size-l);
+        width: 80%;
+    }
+
+    /* End of Branches Page */
 
     /* Restaurants Page */
 
