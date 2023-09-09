@@ -451,7 +451,7 @@ a {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
-.weddings__hero-text__anim{
+.weddings__hero-text{
     font-size: var(--size-5xl);
     color: var(--clr-light);
     letter-spacing: 0.05rem;
@@ -654,7 +654,7 @@ a {
     
     /* End of General */
 
-    .weddings__hero-text__anim{
+    .weddings__hero-text{
         font-size: var(--size-6xl);
     }
 
@@ -703,7 +703,7 @@ a {
 
     /* End of General */
 
-    .weddings__hero-text__anim{
+    .weddings__hero-text{
         font-size: var(--size-7xl);
     }
 
@@ -741,7 +741,7 @@ a {
 
     /* End of General */
 
-    .weddings__hero-text__anim{
+    .weddings__hero-text{
         font-size: var(--size-8xl);
     }
 
@@ -871,7 +871,7 @@ a {
 
     /* End of General */
 
-    .weddings__hero-text__anim{
+    .weddings__hero-text{
         font-size: var(--size-9xl);
     }
 
@@ -905,7 +905,7 @@ a {
 
     /* End of General */
 
-    .weddings__hero-text__anim{
+    .weddings__hero-text{
         font-size: var(--size-9xl);
     }
 

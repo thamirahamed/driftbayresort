@@ -6,10 +6,18 @@
     <title>Driftbay Resort</title>
     
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/svg+xml" href="images/hotellogo1.webp">
-    <link href="https://api.fontshare.com/v2/css?f[]=synonym@600,500,300,700,400&display=swap" rel="stylesheet">  
+    <link href="https://api.fontshare.com/v2/css?f[]=synonym@600,500,300,700,400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/app/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/app/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/app/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="images/app/safari-pinned-tab.svg" color="#1e2d48">
+    <link rel="shortcut icon" href="images/app/favicon.ico">
 
-    <meta charset="UTF-8" />
+    <meta name="msapplication-TileColor" content="#1e2d48">
+    <meta name="msapplication-config" content="images/app/browserconfig.xml">
+    <meta name="theme-color" content="#1e2d48">  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a website about Driftbay Resort">
 
@@ -52,7 +60,7 @@
     <!-- End of Mobile Navigation -->
 
     <div class="restaurants__hero">
-      <h1 class="restaurants__hero-text__anim">Restaurants</h1>
+      <h1 class="restaurants__hero-text">Restaurants</h1>
     </div>
 
     <main>
@@ -182,24 +190,7 @@
     
     </footer>
 
-    <script>
-
-      const headerBtn = document.querySelector('.header__bars');
-      const mobileNav = document.querySelector('.mobile-nav2');
-      
-      // State
-      let isMobileNavOpen = false;
-  
-      headerBtn.addEventListener('click', () => {
-        isMobileNavOpen = !isMobileNavOpen;
-        if (isMobileNavOpen) {
-          mobileNav.style.display = 'flex';
-        } else{
-          mobileNav.style.display = 'none';
-        }
-      });
-  
-    </script>
+    <script src="scripts/main.js"></script> <!--Mobile menu script-->
 
   </body>
     
