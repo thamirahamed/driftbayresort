@@ -40,6 +40,17 @@
 
 /* General */
 
+@font-face {
+    font-family: 'Synonym';
+    src: url('//cdn.fontshare.com/wf/74H2KDWJMBALTKHNIQRGZBU5ICACXZVT/ELAHIXGEN3HHKQ7JK54VOXWQFZLLOHW2/37TO4J4G54TAREFY7PFS5VAXDGLM7BKV.woff2') format('woff2'),
+         url('//cdn.fontshare.com/wf/74H2KDWJMBALTKHNIQRGZBU5ICACXZVT/ELAHIXGEN3HHKQ7JK54VOXWQFZLLOHW2/37TO4J4G54TAREFY7PFS5VAXDGLM7BKV.woff') format('woff'),
+         url('//cdn.fontshare.com/wf/74H2KDWJMBALTKHNIQRGZBU5ICACXZVT/ELAHIXGEN3HHKQ7JK54VOXWQFZLLOHW2/37TO4J4G54TAREFY7PFS5VAXDGLM7BKV.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+}
+  
+
 *,::before,::after {
     box-sizing: border-box;
 }
