@@ -1074,7 +1074,7 @@ a {
 
 .restaurants__card:hover .restaurants__imgBx{
     top: -80px;
-    scale: 0.8;
+    transform: scale(0.8);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -1117,7 +1117,7 @@ a {
 }
 
 .restaurants__card:hover .restaurants__content{
-    height: 400px;
+    height: 320px;
     top: 150px;
 }
 
@@ -1529,7 +1529,7 @@ a {
     }
 
     .restaurants__card:hover .restaurants__content{
-        height: 320px;
+        height: 280px;
     }
 
     .event__btn, .event__links span{
@@ -1637,46 +1637,6 @@ a {
 
     .restaurants__hero-text{
         font-size: var(--size-7xl);
-    }
-
-    .restaurants__card{
-        width: 390px;
-        height: 390px;
-    }
-
-    .restaurants__card:hover{
-        height: 470px;
-    }
-
-    .restaurants__imgBx{
-        width: 430px;
-        height: 250px;
-    }
-
-    .restaurants__content{
-        top: 275px;
-        height: 85px;
-    }
-
-    .restaurants__content h2{
-        font-size: var(--size-5xl);
-    }
-
-    .restaurants__content h3{
-        font-size: var(--size-xl);
-    }
-
-    .restaurants__content p{
-        font-size: var(--size-base);
-    }
-
-    .restaurants__content a{
-        font-size: var(--size-base);
-    }
-
-    .restaurants__card:hover .restaurants__content{
-        height: 350px;
-        top: 160px;
     }
 
     /* End of Restaurants Page */
@@ -1846,16 +1806,44 @@ a {
         font-size: var(--size-8xl);
     }
 
+    .restaurants__card{
+        width: 390px;
+        height: 390px;
+    }
+
     .restaurants__card:hover{
-        height: 510px;
+        height: 470px;
+    }
+
+    .restaurants__imgBx{
+        width: 430px;
+        height: 250px;
+    }
+
+    .restaurants__content{
+        top: 275px;
+        height: 85px;
+    }
+
+    .restaurants__content h2{
+        font-size: var(--size-5xl);
+    }
+
+    .restaurants__content h3{
+        font-size: var(--size-xl);
     }
 
     .restaurants__content p{
-        font-size: var(--size-l);
+        font-size: var(--size-base);
     }
 
     .restaurants__content a{
-        font-size: var(--size-l);
+        font-size: var(--size-base);
+    }
+
+    .restaurants__card:hover .restaurants__content{
+        height: 305px;
+        top: 160px;
     }
 
     .event-title h1{
@@ -2174,6 +2162,22 @@ a {
     /* End of Adventures Page */
 
     /* Restaurants Page */
+
+    .restaurants__card:hover{
+        height: 510px;
+    }
+
+    .restaurants__content p{
+        font-size: var(--size-l);
+    }
+
+    .restaurants__content a{
+        font-size: var(--size-l);
+    }
+
+    .restaurants__card:hover .restaurants__content{
+        height: 335px;
+    }
 
     .event__btn, .event__links span{
         width: 500px;
