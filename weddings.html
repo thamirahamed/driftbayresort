@@ -29,19 +29,19 @@
   
         <a href="index.html"><img class="logo" src="images/hotellogo1.webp" alt="logo"></a>
                 
-          <ul class="header__navlinks">
-            <div class="header__mainlinks">
+          <div class="header__navlinks">
+            <ul class="header__mainlinks">
                 <li><a class="header__link" href="index.html">Home</a></li>
                 <li><a class="header__link" href="branches.html">Branches</a></li>
                 <li><a class="header__link" href="adventures.html">Adventures</a></li>
                 <li><a class="header__link" href="restaurants.html">Restaurants</a></li>
                 <li><a class="header__booknow btn" href="booking.html">Book Now</a></li>
-            </div>
-            <div class="header__eventlinks">
+            </ul>
+            <ul class="header__eventlinks">
                 <li><a class="header__link" href="weddings.html">weddings</a></li>
                 <li><a class="header__link" href="meetings.html">meetings</a></li>
-            </div>
-          </ul>
+            </ul>
+          </div>
       
           <button class="header__bars">
             <img src="images/bars.svg" alt="Menu Bar Button">           
@@ -53,18 +53,20 @@
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
       <nav> 
-        <ul class="mobile-nav__menu">
-          <li><a href="index.html" class="mobile-nav__link">Home</a></li>
-          <li><a href="branches.html" class="mobile-nav__link">Branches</a></li>
-          <li><a href="adventures.html" class="mobile-nav__link">Adventures</a></li>
-          <li><a href="restaurants.html" class="mobile-nav__link">Restaurants</a></li>
-          <li><a href="booking.html" class="mobile-nav__btn btn">Book Now</a></li>
+        <div class="mobile-nav__menu">
+          <ul class="mobile-nav__mainmenu">
+            <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+            <li><a href="branches.html" class="mobile-nav__link">Branches</a></li>
+            <li><a href="adventures.html" class="mobile-nav__link">Adventures</a></li>
+            <li><a href="restaurants.html" class="mobile-nav__link">Restaurants</a></li>
+            <li><a href="booking.html" class="mobile-nav__btn btn">Book Now</a></li>
+          </ul>
           <i></i>
-          <div class="mobile-nav__eventmenu">
+          <ul class="mobile-nav__eventmenu">
             <li><a class="mobile-nav__link mobile-nav__eventlinks" href="weddings.html">weddings</a></li>
             <li><a class="mobile-nav__link mobile-nav__eventlinks" href="meetings.html">meetings</a></li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
     <!-- End of Mobile Navigation -->

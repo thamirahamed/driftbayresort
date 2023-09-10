@@ -210,6 +210,7 @@ a {
     display: flex;
     align-items: baseline;
     gap: 3rem;
+    list-style: none;
 }
 
 .header__eventlinks{
@@ -217,6 +218,7 @@ a {
     align-items: baseline;
     gap: 3rem;
     justify-content: center;
+    list-style: none;
 }
 
 .header__eventlinks a{
@@ -290,7 +292,6 @@ a {
 }
 
 .mobile-nav__menu{
-    list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -298,6 +299,16 @@ a {
     align-items: center;
     gap: 3rem;
     animation: fade-down 0.3s backwards;
+}
+
+.mobile-nav__mainmenu{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
 
 .mobile-nav__link{
@@ -326,6 +337,8 @@ a {
 }
 
 .mobile-nav__eventmenu {
+    padding: 0;
+    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
