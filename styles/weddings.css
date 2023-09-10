@@ -597,6 +597,7 @@ a {
 
 .settings__reservebtn{  
     position: relative;
+    top: 11px;
 }
 
 .review{
@@ -690,7 +691,7 @@ a {
     }
 
     .settings__reservebtn{  
-        top: -22.5px;
+        top: -12px;
     }
 
     .review__info{
@@ -789,7 +790,7 @@ a {
     }
     
     .settings__reservebtn{  
-        top: -10px;
+        top: 1px;
     }
 
     .review{
